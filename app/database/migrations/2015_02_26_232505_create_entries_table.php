@@ -16,6 +16,7 @@ class CreateEntriesTable extends Migration {
 			$t->increments('id');
 			$t->string('idea', 255);
 			$t->string('email', 255);
+			$t->timestamps();
 		});
 	}
 
