@@ -15,3 +15,5 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/concours', array('as' => 'entries.form', 'uses' => 'EntryController@getForm'));
