@@ -4,7 +4,7 @@ class EntryController extends BaseController {
 
 	public function getForm()
 	{
-		return 'form';
+		return View::make('entry.form');
 	}
 
 }
