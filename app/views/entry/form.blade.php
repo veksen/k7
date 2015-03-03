@@ -4,11 +4,21 @@
 
 {{ Form::open() }}
 
-	{{ Form::label('idea') }}
-	{{ Form::text('idea') }}
+<div class="row form-group">
 
-	{{ Form::label('email') }}
-	{{ Form::email('email') }}
+	<div class="col-xs-3">{{ Form::label('idea', 'Idée', array('class'=>'control-label')) }}</div>
+	<div class="col-xs-9">{{ Form::text('idea', Input::old('idea'), array('class'=>'form-control')) }}</div>
+
+</div>
+
+<hr>
+
+<div class="row form-group">
+
+	<div class="col-xs-3">{{ Form::label('email') }}</div>
+	<div class="col-xs-9">{{ Form::email('email', Input::old('email'), array('class'=>'form-control')) }}</div>
+
+</div>
 
 {{ Form::close() }}
 
