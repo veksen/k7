@@ -16,6 +16,11 @@ class CreateEntriesTable extends Migration {
 			$t->increments('id');
 			$t->string('idea', 255);
 			$t->string('email', 255);
+			$t->string('firstname', 255);
+			$t->string('lastname', 255);
+			$t->string('address', 255);
+			$t->string('city');
+			$t->string('zipcode', 7);
 			$t->timestamps();
 		});
 	}
