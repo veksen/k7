@@ -25,4 +25,11 @@ class EntryController extends BaseController {
 			->with('message', $message);
 	}
 
+	public function getList()
+	{
+		$entries = Entry::all();
+
+		return $entries;
+	}
+
 }
