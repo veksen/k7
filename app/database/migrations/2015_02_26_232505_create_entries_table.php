@@ -14,6 +14,7 @@ class CreateEntriesTable extends Migration {
 	{
 		Schema::create('entries', function($t) {
 			$t->increments('id');
+			$t->integer('status');
 			$t->string('idea', 255);
 			$t->string('email', 255);
 			$t->string('firstname', 255);
