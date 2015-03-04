@@ -9,6 +9,7 @@
 <table class="table table-striped table-hover">
 	<thead>
 		<tr>
+			<th></th>
 			<th>#</th>
 			<th>Idée</th>
 			<th>Email</th>
@@ -21,13 +22,14 @@
 	<tbody>
 		@foreach($entries as $entry)
 		<tr>
+			<td>{{ $entry->status }}</td>
 			<td>{{ $entry->id }}</td>
 			<td>{{ $entry->idea }}</td>
 			<td>{{ $entry->email }}</td>
 			<td>{{ $entry->firstname . $entry->lastname }}</td>
-			<td>bon</td>
-			<td>dsq</td>
-			<td>del</td>
+			<td><a href="{{ route('entries.tag', array($entry->id, 1)) }}">bon</a></td>
+			<td><a href="{{ route('entries.tag', array($entry->id, 2)) }}">dsq</a></td>
+			<td><a href="{{ route('entries.tag', array($entry->id, 3)) }}">del</a></td>
 		</tr>
 		@endforeach
 	</tbody>

@@ -54,4 +54,15 @@ class EntryController extends BaseController {
 			->with('entries', $entries);
 	}
 
+	public function tagEntry($id, $status)
+	{
+		if(in_array($status, array(1,2,3))) {
+			$entry = Entry::find($id);
+			$entry->status = $status;
+			$entry->save();
+		}
+
+		return Redirect::back();
+	}
+
 }

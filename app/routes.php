@@ -21,3 +21,4 @@ Route::post('/concours', array('as' => 'entries.form_post', 'uses' => 'EntryCont
 Route::get('/reglements', array('as' => 'entries.rules', 'uses' => 'EntryController@getRules'));
 
 Route::get('/liste', array('as' => 'entries.list', 'uses' => 'EntryController@getList'));
+Route::get('/liste/tag/{id}/{status}', array('as' => 'entries.tag', 'uses' => 'EntryController@tagEntry'));
