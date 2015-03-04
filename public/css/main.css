@@ -4,3 +4,7 @@ body {
 .form-group:last-child {
 	margin-bottom: 0;
 }
+.table th.min-w,
+.table td.min-w {
+	width: 1px;
+}

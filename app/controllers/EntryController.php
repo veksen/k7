@@ -29,7 +29,8 @@ class EntryController extends BaseController {
 	{
 		$entries = Entry::all();
 
-		return $entries;
+		return View::make('entry.list')
+			->with('entries', $entries);
 	}
 
 }
