@@ -1,5 +1,6 @@
 body {
 	margin: 15px;
+	font-size: 15px;
 }
 .form-group:last-child {
 	margin-bottom: 0;
@@ -7,4 +8,9 @@ body {
 .table th.min-w,
 .table td.min-w {
 	width: 1px;
+}
+span.count {
+	display: inline-block;
+	font-weight: 700;
+	padding-right: 5px;
 }
