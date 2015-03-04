@@ -14,20 +14,29 @@ class EntryController extends BaseController {
 
 	public function postForm()
 	{
-		$entry = new Entry;
-		$entry->idea      = Input::get('idea');
-		$entry->email     = Input::get('email');
-		$entry->firstname = Input::get('firstname');
-		$entry->lastname  = Input::get('lastname');
-		$entry->address   = Input::get('address');
-		$entry->city      = Input::get('city');
-		$entry->zipcode   = Input::get('zipcode');
-		$entry->save();
+		$v = Validator::make(Input::all(), Entry::$rules);
 
-		$message = 'message de succès';
+		if(!$v->passes()) {
+			$message = 'message d\'erreur';
+			return Redirect::back()
+				->with('message', $message)
+				->withErrors($v->messages())
+				->withInput();
+		} else {
+			$entry = new Entry;
+			$entry->idea      = Input::get('idea');
+			$entry->email     = Input::get('email');
+			$entry->firstname = Input::get('firstname');
+			$entry->lastname  = Input::get('lastname');
+			$entry->address   = Input::get('address');
+			$entry->city      = Input::get('city');
+			$entry->zipcode   = Input::get('zipcode');
+			$entry->save();
 
-		return Redirect::back()
-			->with('message', $message);
+			$message = 'message de succès';
+			return Redirect::back()
+				->with('message', $message);
+		}
 	}
 
 	public function getRules()
