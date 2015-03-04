@@ -2,6 +2,11 @@
 
 class EntryController extends BaseController {
 
+	public function __construct()
+	{
+		View::share('active', Route::currentRouteName());
+	}
+
 	public function getForm()
 	{
 		return View::make('entry.form');
