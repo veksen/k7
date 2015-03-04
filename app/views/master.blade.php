@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>k7</title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
