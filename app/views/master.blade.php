@@ -32,8 +32,9 @@
 </nav>
 <div class="container">
 @if(Session::has('message'))
-<div class="message">
-{{ Session::get('message') }}
+<div class="alert alert-dismissible alert-{{ Session::has('message_type') ? Session::get('message_type') : 'primary' }}">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  {{ Session::get('message') }}
 </div>
 @endif
 @yield('main')

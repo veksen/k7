@@ -20,6 +20,7 @@ class EntryController extends BaseController {
 			$message = 'message d\'erreur';
 			return Redirect::back()
 				->with('message', $message)
+				->with('message_type', 'danger')
 				->withErrors($v->messages())
 				->withInput();
 		} else {
@@ -35,7 +36,8 @@ class EntryController extends BaseController {
 
 			$message = 'message de succès';
 			return Redirect::back()
-				->with('message', $message);
+				->with('message', $message)
+				->with('message_type', 'success');
 		}
 	}
 
