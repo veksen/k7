@@ -6,6 +6,8 @@
 
 {{ Form::open(array('class'=>'form-horizontal')) }}
 
+<legend>Participer au concours</legend>
+
 <div class="row form-group">
 	<div class="col-xs-3">{{ Form::label('idea', 'Idée', array('class'=>'control-label')) }}</div>
 	<div class="col-xs-9">{{ Form::text('idea', Input::old('idea'), array('class'=>'form-control', 'placeholder'=>'Idée')) }}</div>
