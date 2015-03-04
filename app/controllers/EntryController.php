@@ -25,6 +25,11 @@ class EntryController extends BaseController {
 			->with('message', $message);
 	}
 
+	public function getRules()
+	{
+		return View::make('entry.rules');
+	}
+
 	public function getList()
 	{
 		$entries = Entry::all();
