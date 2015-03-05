@@ -17,6 +17,7 @@ Route::get('/', function()
 });
 
 Route::get('/concours', array('as' => 'entries.form', 'uses' => 'EntryController@getForm'));
+Route::get('/concours2', array('as' => 'entries.form2', 'uses' => 'EntryController@getForm2'));
 Route::post('/concours', array('as' => 'entries.form_post', 'uses' => 'EntryController@postForm'));
 Route::get('/reglements', array('as' => 'entries.rules', 'uses' => 'EntryController@getRules'));
 

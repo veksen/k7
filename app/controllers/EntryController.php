@@ -12,6 +12,11 @@ class EntryController extends BaseController {
 		return View::make('entry.form');
 	}
 
+	public function getForm2()
+	{
+		return View::make('entry.form2');
+	}
+
 	public function postForm()
 	{
 		$v = Validator::make(Input::all(), Entry::$rules);
