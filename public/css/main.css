@@ -14,3 +14,7 @@ span.count {
 	font-weight: 700;
 	padding-right: 5px;
 }
+.table > thead > tr > td.deleted, .table > tbody > tr > td.deleted, .table > tfoot > tr > td.deleted, .table > thead > tr > th.deleted, .table > tbody > tr > th.deleted, .table > tfoot > tr > th.deleted, .table > thead > tr.deleted > td, .table > tbody > tr.deleted > td, .table > tfoot > tr.deleted > td, .table > thead > tr.deleted > th, .table > tbody > tr.deleted > th, .table > tfoot > tr.deleted > th {
+	background-color: #444;
+	color: #fff;
+}
