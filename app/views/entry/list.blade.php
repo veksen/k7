@@ -21,7 +21,7 @@
 	</thead>
 	<tbody>
 		@foreach($entries as $entry)
-		<tr>
+		<tr class="{{ Lang::get('k7.status.'.$entry->status) }}">
 			<td>{{ $entry->status }}</td>
 			<td>{{ $entry->id }}</td>
 			<td>{{ $entry->idea }}</td>
