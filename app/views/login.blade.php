@@ -11,7 +11,7 @@
 <div class="row form-group{{ $errors->has('email') ? ' has-error' : null }}">
 	<div class="col-xs-3">{{ Form::label('email', 'E-mail', array('class'=>'control-label')) }}</div>
 	<div class="col-xs-9">
-		{{ Form::text('email', Input::old('email'), array('class'=>'form-control', 'placeholder'=>'E-mail')) }}
+		{{ Form::email('email', Input::old('email'), array('class'=>'form-control', 'placeholder'=>'E-mail')) }}
 	</div>
 </div>
 
