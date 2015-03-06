@@ -48,7 +48,7 @@ class EntryController extends BaseController {
 
 	public function getList()
 	{
-		$entries = Entry::all();
+		$entries = Entry::orderBy('created_at', 'ASC')->get();
 
 		return View::make('entry.list')
 			->with('entries', $entries);
