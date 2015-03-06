@@ -58,6 +58,8 @@ class EntryController extends BaseController {
 	{
 		if(in_array($status, array(1,2,3))) {
 			$entry = Entry::find($id);
+
+			if($entry->status == $status) $status = 0;
 			$entry->status = $status;
 			$entry->save();
 		}
