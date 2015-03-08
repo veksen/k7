@@ -8,7 +8,7 @@
 </head>
 <body>
 @include('_nav')
-<div class="container">
+<div class="container{{(isset($fluid)&&$fluid)?'-fluid':null}}">
 @if(Session::has('message'))
 <div class="alert alert-dismissible alert-{{ Session::has('message_type') ? Session::get('message_type') : 'primary' }}">
   <button type="button" class="close" data-dismiss="alert">×</button>

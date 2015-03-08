@@ -48,10 +48,13 @@ class EntryController extends BaseController {
 
 	public function getList()
 	{
+		$fluid = true;
+
 		$entries = Entry::orderBy('created_at', 'ASC')->get();
 
 		return View::make('entry.list')
-			->with('entries', $entries);
+			->with('entries', $entries)
+			->with('fluid', $fluid);
 	}
 
 	public function tagEntry($id, $status)
