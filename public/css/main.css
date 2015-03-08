@@ -18,3 +18,6 @@ span.count {
 	background-color: #444;
 	color: #fff;
 }
+.table-hover>tbody>tr>td.deleted:hover, .table-hover>tbody>tr>th.deleted:hover, .table-hover>tbody>tr.deleted:hover>td, .table-hover>tbody>tr:hover>.deleted, .table-hover>tbody>tr.deleted:hover>th {
+	background-color: #333;
+}
